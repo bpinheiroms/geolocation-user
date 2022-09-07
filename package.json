@@ -9,6 +9,9 @@
     "lint": "next lint",
     "test": "jest --env=jsdom"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "dependencies": {
     "@testing-library/react-hooks": "^7.0.2",
     "axios": "^0.26.0",
