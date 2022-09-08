@@ -1,10 +1,8 @@
-import type {  NextPage } from 'next';
+import type { NextPage } from 'next';
+import GridCardsTemplate from '../templates/GridCards';
 
 const Home: NextPage = () => {
-  return (
-    <div>home</div>
-  );
+  return <GridCardsTemplate />;
 };
-
 
 export default Home;

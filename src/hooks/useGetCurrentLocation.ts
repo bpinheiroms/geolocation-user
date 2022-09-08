@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useGetCurrentLocation = () => {
   const [data, setData] = useState<Coordinates>(null);
-  const [status, setStatus] = useState<CoordinatesStatusRequest>('idle');
+  const [status, setStatus] = useState<CoordinatesStatusRequest>('loading');
   const [errorData, setErrorData] = useState<CoordinatesErrorData>(null);
 
   useEffect(() => {

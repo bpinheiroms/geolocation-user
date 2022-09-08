@@ -7,7 +7,8 @@ type Coordinates = {
   longitude: string;
 } | null;
 
-type CoordinatesStatusRequest = 'idle' | 'loading' | 'success' | 'error';
+type CoordinatesStatusRequest = 'loading' | 'success' | 'error';
+type MessageStatus = 'loading' | 'error';
 
 type CoordinatesErrorData = {
   code: number;
