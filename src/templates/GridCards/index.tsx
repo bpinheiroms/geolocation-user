@@ -1,4 +1,5 @@
 import Header from '../../components/Header';
+import HourlyItemsTemplate from '../HourlyItems';
 
 import WeatherItemsTemplate from '../WeatherItems';
 
@@ -8,7 +9,7 @@ const GridCardsTemplate = () => {
       <div className="w-[900px] p-4">
         <Header value="Olá, seja bem vindo!" />
         <WeatherItemsTemplate />
-        <div className="bg-red-400 rounded-3xl p-5 mt-5 h-48">Hourly Card</div>
+        <HourlyItemsTemplate />
       </div>
     </div>
   );
