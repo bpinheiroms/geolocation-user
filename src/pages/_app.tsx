@@ -1,8 +1,9 @@
 import '../styles/globals.css';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClientProvider } from 'react-query';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
+import { queryClient } from '../config/react-query';
 
 function SafeHydrate({ children }: any) {
   return (
@@ -13,14 +14,6 @@ function SafeHydrate({ children }: any) {
 }
 
 function MyApp({ Component, pageProps }: any) {
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        refetchOnWindowFocus: false,
-      },
-    },
-  });
-
   return (
     <QueryClientProvider client={queryClient}>
       <SafeHydrate>
