@@ -1,7 +1,5 @@
 import '../styles/globals.css';
 import { QueryClientProvider } from 'react-query';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import { queryClient } from '../config/react-query';
 
@@ -19,7 +17,6 @@ function MyApp({ Component, pageProps }: any) {
       <SafeHydrate>
         <Component {...pageProps} />
       </SafeHydrate>
-      <ToastContainer />
     </QueryClientProvider>
   );
 }
