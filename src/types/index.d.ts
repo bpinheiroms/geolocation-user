@@ -28,7 +28,7 @@ type WeatherResponse = {
   dt: number;
   id: number;
   main: {
-    fells_like: number;
+    feels_like: number;
     humidity: number;
     pressure: number;
     temp: number;
@@ -67,7 +67,7 @@ type WeatherHourlyResponse = {
   list: {
     dt: number;
     main: {
-      fells_like: number;
+      feels_like: number;
       humidity: number;
       pressure: number;
       temp: number;
