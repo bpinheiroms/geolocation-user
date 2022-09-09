@@ -64,43 +64,45 @@ type WeatherHourlyResponse = {
   cod: number;
   message: number;
   cnt: number;
-  list: {
-    dt: number;
-    main: {
-      feels_like: number;
-      humidity: number;
-      pressure: number;
-      temp: number;
-      temp_max: number;
-      temp_min: number;
-      sea_level: number;
-      grnd_level: number;
-      temp_kf: number;
-    };
-    weather: [
-      {
-        id: number;
-        main: string;
-        description: string;
-        icon: string;
-      },
-    ];
-    clouds: {
-      all: number;
-    };
-    wind: {
-      speed: number;
-      deg: number;
-      gust: number;
-    };
-    visibility: number;
-    pop: number;
-    rain: {
-      [key: string]: number;
-    };
-    sys: {
-      pod: string;
-    };
-    dt_txt: string;
-  }[];
+  list: HourlyItem[];
+};
+
+type HourlyItem = {
+  dt: number;
+  main: {
+    feels_like: number;
+    humidity: number;
+    pressure: number;
+    temp: number;
+    temp_max: number;
+    temp_min: number;
+    sea_level: number;
+    grnd_level: number;
+    temp_kf: number;
+  };
+  weather: [
+    {
+      id: number;
+      main: string;
+      description: string;
+      icon: string;
+    },
+  ];
+  clouds: {
+    all: number;
+  };
+  wind: {
+    speed: number;
+    deg: number;
+    gust: number;
+  };
+  visibility: number;
+  pop: number;
+  rain: {
+    [key: string]: number;
+  };
+  sys: {
+    pod: string;
+  };
+  dt_txt: string;
 };
