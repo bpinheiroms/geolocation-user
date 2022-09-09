@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import SpinnerAnimated from '../SpinnerAnimated';
 
 interface IProps {
@@ -6,15 +7,26 @@ interface IProps {
 }
 
 const WeatherCard: React.FC<IProps> = ({ isLoading, data }) => {
+  const tempMemo = useMemo(() => {
+    if (!data) return data;
+
+    return {
+      temp: data.main.temp | 0,
+      feels_like: data.main.feels_like | 0,
+      temp_min: data.main.temp_min | 0,
+      temp_max: data.main.temp_max | 0,
+    };
+  }, [data]);
+
   return (
-    <div className="w-72 p-5 h-auto  bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl ">
+    <div className="w-96 p-5 h-auto  bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl ">
       {isLoading ? (
-        <SpinnerAnimated/>
+        <SpinnerAnimated />
       ) : (
         <div className="flex flex-col gap-2 relative">
           <div className="flex flex-1 justify-between  ">
             <p className="text-9xl text-white">
-              20
+              {tempMemo?.temp}
               <span className="text-4xl">°c</span>
             </p>
             <img
@@ -23,12 +35,9 @@ const WeatherCard: React.FC<IProps> = ({ isLoading, data }) => {
             />
           </div>
           <div className="w-full text-gray-200">
-            <p>Sensação Térmica: 20°c</p>
-          </div>
-          <div className="w-full flex justify-between text-gray-200">
-            <div>Min. 20°c</div>
-            <div>|</div>
-            <div>Máx. 20°c</div>
+            <p>Sensação Térmica: {tempMemo?.feels_like}°c</p>
+            <p>Min. {tempMemo?.temp_min}°c</p>
+            <p>Máx. {tempMemo?.temp_max}°c</p>
           </div>
         </div>
       )}
