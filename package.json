@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom --coverage"
   },
   "jest": {
     "testEnvironment": "jsdom"

@@ -26,4 +26,4 @@ const useGetCurrentLocation = () => {
   return { data, status, errorData };
 };
 
-export default useGetCurrentLocation;
+export { useGetCurrentLocation };

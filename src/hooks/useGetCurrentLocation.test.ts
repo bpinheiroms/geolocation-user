@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { mockNavigatorGeolocation } from '../utils/test';
 
-import useGetCurrentLocation from './useGetCurrentLocation';
+import { useGetCurrentLocation } from './useGetCurrentLocation';
 
 describe('[hook] - useGetCurrentLocation', () => {
   const { getCurrentPositionMock } = mockNavigatorGeolocation();
