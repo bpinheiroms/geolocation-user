@@ -30,13 +30,14 @@ Para poder inicializar o projeto, é preciso instalar as depedendencias e rodar,
 
 Para rodar os testes unitários, basta digitar o seguinte comando: `yarn test`
 
-### 🖼 Tecnologias
+### 🖼 Definições Técnicas
 
 -    TailwindCSS
 -    React Query
 -    NextJs
 -    Jest
 -    Typescript
+-    Integração com OpenWeatherMap (API)
 
 
 
