@@ -8,7 +8,7 @@ interface IProps {
 
 const LocalizationCard: React.FC<IProps> = ({ data, isLoading }) => {
   return (
-    <div className="flex-1 p-5 rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-500  h-auto text-white">
+    <div className="flex-1 p-5 min-w-[400px] rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-500  h-auto text-white">
       {isLoading ? (
         <SpinnerAnimated />
       ) : (

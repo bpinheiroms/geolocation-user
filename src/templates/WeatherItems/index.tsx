@@ -10,7 +10,7 @@ const WeatherItemsTemplate: React.FC<IParams> = ({ data }) => {
   const weatherData = useGetWeatherData(data);
 
   return (
-    <div className="flex gap-5 mt-5">
+    <div className="flex flex-col md:flex-row gap-5 mt-5">
       <WeatherCard isLoading={weatherData.isLoading} data={weatherData.data} />
       <LocalizationCard
         isLoading={weatherData.isLoading}

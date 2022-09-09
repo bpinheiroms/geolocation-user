@@ -19,7 +19,7 @@ const WeatherCard: React.FC<IProps> = ({ isLoading, data }) => {
   }, [data]);
 
   return (
-    <div className="w-96 p-5 h-auto  bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl ">
+    <div className="min-w-[320px] p-5 h-auto bg-gradient-to-r from-blue-500 to-cyan-500 md:from-cyan-500 md:to-blue-500 rounded-3xl ">
       {isLoading ? (
         <SpinnerAnimated />
       ) : (

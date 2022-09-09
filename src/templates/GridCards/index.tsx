@@ -10,7 +10,7 @@ const GridCardsTemplate = () => {
 
   return (
     <div className="flex flex-col justify-center items-center mt-16 ">
-      <div className="w-[900px] p-4">
+      <div className="p-4">
         <Header hideButton={lockFeatures} value="Olá, seja bem vindo!" />
 
         {lockFeatures ? (
