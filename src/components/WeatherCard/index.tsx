@@ -10,11 +10,13 @@ const WeatherCard: React.FC<IProps> = ({ isLoading, data }) => {
   const tempMemo = useMemo(() => {
     if (!data) return data;
 
+    const description = data?.weather[0].description
     return {
       temp: data.main.temp | 0,
       feels_like: data.main.feels_like | 0,
       temp_min: data.main.temp_min | 0,
       temp_max: data.main.temp_max | 0,
+      description: description.charAt(0).toUpperCase() + description.slice(1)
     };
   }, [data]);
 
@@ -31,7 +33,7 @@ const WeatherCard: React.FC<IProps> = ({ isLoading, data }) => {
             </p>
             <img
               className="absolute right-0"
-              src="/images/weather-icons/02d.png"
+              src={`/images/weather-icons/${data?.weather[0].icon}.png`}
             />
           </div>
           <div className="w-full text-gray-200">
@@ -39,6 +41,7 @@ const WeatherCard: React.FC<IProps> = ({ isLoading, data }) => {
             <p>
               Min. {tempMemo?.temp_min}°c / Máx. {tempMemo?.temp_max}°c
             </p>
+            <p>{tempMemo?.description}</p>
           </div>
         </div>
       )}
