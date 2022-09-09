@@ -16,9 +16,7 @@ const LocalizationCard: React.FC<IProps> = ({ data, isLoading }) => {
           <div className="flex flex-1 flex-col">
             <h2 className="text-4xl mb-5 mt-10">{`${data?.name}, ${data?.sys.country}`}</h2>
             <p>Latitude: {data?.coord.lat}</p>
-            <p>Longitude: {data?.coord.long}</p>
-            <p>Nascer do Sol: {data?.sys.sunrise}</p>
-            <p>Por do Sol: {data?.sys.sunset}</p>
+            <p>Longitude: {data?.coord.lon}</p>
           </div>
           <div className="w-28 flex justify-center items-start">
             <MapPinIcon className="mt-10" />

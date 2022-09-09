@@ -23,7 +23,7 @@ type WeatherResponse = {
   cod: number;
   coord: {
     lat: number;
-    long: number;
+    lon: number;
   };
   dt: number;
   id: number;
