@@ -30,6 +30,10 @@ Para poder inicializar o projeto, é preciso instalar as depedendencias e rodar,
 
 Para rodar os testes unitários, basta digitar o seguinte comando: `yarn test`
 
+![Captura de Tela 2022-09-09 às 00 40 04](https://user-images.githubusercontent.com/22135548/189267012-6c811a67-c8df-4c87-8efa-ffc321a355d4.png)
+
+
+
 ### 🖼 Definições Técnicas
 
 -    TailwindCSS
