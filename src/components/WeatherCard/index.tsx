@@ -36,8 +36,9 @@ const WeatherCard: React.FC<IProps> = ({ isLoading, data }) => {
           </div>
           <div className="w-full text-gray-200">
             <p>Sensação Térmica: {tempMemo?.feels_like}°c</p>
-            <p>Min. {tempMemo?.temp_min}°c</p>
-            <p>Máx. {tempMemo?.temp_max}°c</p>
+            <p>
+              Min. {tempMemo?.temp_min}°c / Máx. {tempMemo?.temp_max}°c
+            </p>
           </div>
         </div>
       )}

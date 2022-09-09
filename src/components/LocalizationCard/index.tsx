@@ -14,7 +14,7 @@ const LocalizationCard: React.FC<IProps> = ({ data, isLoading }) => {
       ) : (
         <div className="flex flex-1">
           <div className="flex flex-1 flex-col">
-            <h2 className="text-4xl mb-5 mt-10">{`${data?.name}, ${data?.sys.country}`}</h2>
+            <h2 className="text-4xl mb-5 mt-12">{`${data?.name}, ${data?.sys.country}`}</h2>
             <p>Latitude: {data?.coord.lat}</p>
             <p>Longitude: {data?.coord.lon}</p>
           </div>
