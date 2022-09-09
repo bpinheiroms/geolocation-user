@@ -9,7 +9,7 @@ const GridCardsTemplate = () => {
   const lockFeatures = status === 'loading' || status === 'error';
 
   return (
-    <div className="flex flex-col justify-center items-center mt-16 ">
+    <div className="flex flex-col justify-center items-center mt-0 md:mt-16 ">
       <div className="p-4">
         <Header hideButton={lockFeatures} value="Olá, seja bem vindo!" />
 

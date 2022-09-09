@@ -15,7 +15,7 @@ const RefreshButton: React.FC<IProps> = ({ value }) => {
 
   return (
     <div
-      className="flex justify-center items-center mt-8 md:mt-0 text-gray-500 cursor-pointer gap-2"
+      className="flex justify-end items-center mt-8 md:mt-0 text-gray-500 cursor-pointer gap-2"
       onClick={onRefresh}>
       <ArrowPathIcon className="h-6 w-6" />
       <p className="">{value}</p>
